@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>AI Context Translator</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <main>
+    <h1>AI Translator</h1>
+
+    <label class="row toggle">
+      <span>Enabled</span>
+      <input id="enabled" type="checkbox" />
+    </label>
+
+    <label>
+      <span>Target language</span>
+      <input id="targetLanguage" type="text" placeholder="e.g., Spanish" />
+    </label>
+
+    <label>
+      <span>Model</span>
+      <select id="model"></select>
+    </label>
+
+    <label>
+      <span>Pollinations API Key (BYOK)</span>
+      <input id="apiKey" type="password" placeholder="sk_... or pk_..." />
+    </label>
+
+    <label>
+      <span>System prompt</span>
+      <textarea id="systemPrompt" rows="5"></textarea>
+    </label>
+
+    <button id="save">Save</button>
+    <p id="status" aria-live="polite"></p>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

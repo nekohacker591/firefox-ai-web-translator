@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Web Translator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>AI Web Translator</h1>
+
+      <button id="toggleBtn" type="button" class="toggle-btn off">Translation OFF</button>
+
+      <label class="row" for="targetLanguage">
+        <span>Target language</span>
+        <input id="targetLanguage" type="text" placeholder="English" />
+      </label>
+
+      <label class="row" for="modelSelect">
+        <span>Model</span>
+        <select id="modelSelect"></select>
+      </label>
+
+      <label class="row" for="apiKey">
+        <span>Pollinations API key</span>
+        <input id="apiKey" type="password" placeholder="sk_... or pk_..." autocomplete="off" />
+      </label>
+
+      <label class="row" for="systemPrompt">
+        <span>System prompt</span>
+        <textarea id="systemPrompt" rows="4"></textarea>
+      </label>
+
+      <p id="status" role="status" aria-live="polite"></p>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "AI Web Translator (BYOK)",
+  "version": "1.0.0",
+  "description": "Context-aware webpage translation for Firefox using AI models with Bring Your Own Key support.",
+  "permissions": ["storage", "activeTab", "tabs"],
+  "host_permissions": ["<all_urls>", "https://gen.pollinations.ai/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "AI Web Translator"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "ai-web-translator@example.com",
+      "strict_min_version": "109.0"
+    }
+  }
+}
